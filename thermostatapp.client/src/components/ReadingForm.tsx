@@ -46,7 +46,7 @@ export default function ReadingForm({ onCreated }: { onCreated?: () => void }) {
     return (
         <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-4 bg-white shadow rounded">
             <div>
-                <label className="block font-medium">Temperature (℃)</label>
+                <label className="block font-medium">Temperature</label>
                 <input
                     type="number"
                     name="temperatureC"

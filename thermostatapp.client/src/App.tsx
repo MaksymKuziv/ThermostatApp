@@ -10,7 +10,7 @@ function App() {
     const triggerReload = () => setReloadFlag(prev => !prev);
 
     return (
-        <div className="min-h-screen bg-gray-100 p-6">
+        <div className="bg-gray-100 p-6 thermostat-wrap">
             <h1 className="text-2xl font-bold text-center text-blue-700 mb-6">Thermostat Readings</h1>
             <ReadingForm onCreated={triggerReload} />
             <ReadingList key={reloadFlag.toString()} />

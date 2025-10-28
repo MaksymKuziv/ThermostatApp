@@ -37,21 +37,21 @@ export default function ReadingList() {
                 <p className="text-gray-500">No readings found.</p>
             )}
 
-            <ul className="space-y-3">
+            <ul className="space-y-3 list-temperatures">
                 {readings.map(r => (
-                    <li key={r.id} className="border rounded p-3 shadow-sm bg-white">
-                        <div className="text-lg font-medium">
-                            {r.temperatureC.toFixed(1)}°C
-                        </div>
+                    <li key={r.id}>
+                        <span className="text-lg font-medium">
+                            <b>Temperature</b> : {r.temperatureC.toFixed(1)}
+                        </span>
                         {r.location && (
-                            <div className="text-sm text-gray-600"> {r.location}</div>
+                            <span className="text-sm text-gray-600"><b>Location</b> : {r.location}</span>
                         )}
                         {r.notes && (
-                            <div className="text-sm text-gray-700 mt-1">{r.notes}</div>
+                            <span className="text-sm text-gray-700 mt-1"><b>Notes</b> :{r.notes}</span>
                         )}
-                        <div className="text-xs text-gray-400 mt-1">
-                            {new Date(r.createdAtUtc).toLocaleString()}
-                        </div>
+                        <span className="text-xs text-gray-400 mt-1">
+                            <b>Date</b> : {new Date(r.createdAtUtc).toLocaleString()}
+                        </span>
                     </li>
                 ))}
             </ul>
