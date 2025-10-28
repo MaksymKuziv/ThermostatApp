@@ -1,16 +1,19 @@
+﻿import ReadingForm from './components/ReadingForm';
+import ReadingList from './components/ReadingList';
+import { useState } from 'react';
 import './index.css';
 
+
 function App() {
+    const [reloadFlag, setReloadFlag] = useState(false);
+
+    const triggerReload = () => setReloadFlag(prev => !prev);
+
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100">
-            <div className="text-center">
-                <h1 className="text-4xl font-bold text-blue-600 mb-4">
-                    Tailwind is working!
-                </h1>
-                <p className="text-lg text-gray-700">
-                    Text for test 123 123
-                </p>
-            </div>
+        <div className="min-h-screen bg-gray-100 p-6">
+            <h1 className="text-2xl font-bold text-center text-blue-700 mb-6">Thermostat Readings</h1>
+            <ReadingForm onCreated={triggerReload} />
+            <ReadingList key={reloadFlag.toString()} />
         </div>
     );
 }
