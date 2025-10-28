@@ -27,20 +27,15 @@ Features:
 - TypeScript interfaces and API client (axios)
 - Responsive UI with TailwindCSS
 
-Assumptions & trade-offs:
-- No authentication (demo mode)
-- Basic frontend validation only
-- CORS enabled for local development
-- Backend and frontend run separately
-
-
 ## Development Notes
 
 **Time spent:** ~6–8 hours total (including backend, frontend, testing, and documentation)
 
-**What could be improved with more time:**
-- Add authentication (e.g., JWT or Identity)
+**Areas for future improvement:**
+- Implement authentication (e.g., JWT or ASP.NET Identity)
 - Add pagination and filtering to the readings list
-- Add unit and integration tests (xUnit, React Testing Library)
-- Improve error messages and UX polish
-- Add Docker support for easier deployment
+- Introduce unit and integration tests (xUnit, React Testing Library)
+- Enhance frontend validation and error handling
+- Polish UX and accessibility
+- Containerize the app with Docker for easier deployment
+- Optimize API structure and response formatting
